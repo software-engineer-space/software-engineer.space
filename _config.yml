@@ -31,7 +31,8 @@ url: "https://software-engineer.space" # the base hostname & protocol for your s
 #github_username:  jekyll
 
 # Build settings
-theme: minima
+#theme: minima
+remote_theme: tajacks/lightspeed
 plugins:
   - jekyll-feed
 
