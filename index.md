@@ -38,7 +38,8 @@ modify the content of the website.
 
 ## Supported use-cases
 
-The only available service for the moment is the GitHub hosted website described above. \
+The only available service for the moment is the GitHub hosted website described above.
+
 If you have other scenarios or special request feel free to open an issue, I'd be happy to help and understand your
 needs.
 
