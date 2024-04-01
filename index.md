@@ -3,11 +3,38 @@ layout: default
 ---
 Hey! 👋
 
-If you ended up here is probably because you're looking for your own small space in the Software Engineering universe. \
+If you ended up here is probably because you're looking for your own small space in the Software Engineering universe.
+
 Whether you are interested in creating a space with your thoughts, or you might have an interesting idea you decided to 
 pursue, a `.software-engineer.space` domain might be exactly what you need.
 
-## Getting a `.software-engineer.space` domain
+## Getting your `.software-engineer.space`
+
+Let's say you want to host your simple static website to sustain your new idea
+under `your-domain.software-engineer.space`.
+In order to be able to do that just create a PR (through `your-github-username`) in
+the [`software-engineer.space-terraform` repository](https://github.com/software-engineer-space/software-engineer.space-terraform)
+which adds to the root of the repository a file named `your-domain.software-engineer.space.tf`.
+
+The content of the file should be the following:
+
+```terraform
+module "your-domain" {
+  source             = "./modules/software-engineer-space"
+  domain_prefix      = "your-domain"
+  github_handle      = "your-github-username"
+  cloudflare_zone_id = cloudflare_zone.software-engineer-space.id
+
+  providers = {
+    cloudflare = cloudflare
+    github     = github
+  }
+}
+```
+
+Whenever possible the PR will be merged and the changes applied and as a result `your-github-user` GitHub user will be
+assigned with the permissions to write on the newly created `your-domain.sofware-engineer.space` repository in order to
+modify the content of the website.
 
 ## Supported use-cases
 
@@ -17,9 +44,11 @@ needs.
 
 ## Why are you doing this?
 I was playing around with managing Cloudflare DNS via Terraform and I wanted a place where to store my configurations
-and the obvious answer was GitHub. But why create repositories manually if I could have used Terraform for it as well? \
+and the obvious answer was GitHub. But why create repositories manually if I could have used Terraform for it as well?
+
 That's how the idea was born.
 
 Speaking of the hype cycle I haven't probably reached yet the "peak of inflated expectations", so as far as I'm learning
-I'm happy. \
+I'm happy.
+
 The bubble will pop inevitably, but that'd still be learning, right?
