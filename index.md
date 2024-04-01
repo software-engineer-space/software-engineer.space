@@ -17,7 +17,7 @@ needs.
 
 ## Why are you doing this?
 I was playing around with managing Cloudflare DNS via Terraform and I wanted a place where to store my configurations
-and the obvious answer was GitHub. But why create repository manually if I could have used Terraform for it as well? \
+and the obvious answer was GitHub. But why create repositories manually if I could have used Terraform for it as well? \
 That's how the idea was born.
 
 Speaking of the hype cycle I haven't probably reached yet the "peak of inflated expectations", so as far as I'm learning
