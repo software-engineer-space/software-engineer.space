@@ -19,8 +19,8 @@ an entry with the following shape
 
 ```terraform
 {
-github_handle = "your-github-username"
-dns_prefix = "your-domain"
+  github_handle = "your-github-username"
+  dns_prefix = "your-domain"
 }
 ```
 
